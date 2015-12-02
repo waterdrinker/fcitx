@@ -46,7 +46,7 @@ FcitxHotkey FCITX_CTRL_DELETE[2] = {
 FCITX_EXPORT_API
 FcitxHotkey FCITX_BACKSPACE[2] = {
     {NULL, FcitxKey_BackSpace, 0},
-    {NULL, 0, 0},
+    {NULL, FcitxKey_H, FcitxKeyState_Ctrl},
 };
 
 FCITX_EXPORT_API
