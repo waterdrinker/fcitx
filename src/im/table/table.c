@@ -445,6 +445,11 @@ INPUT_RETURN_VALUE DoTableInput(void* arg, FcitxKeySym sym, unsigned int state)
                         table->bNoMatchDontCommit) || !table->bUseAutoSend) &&
                       raw_size >= table->tableDict->iCodeLength)) &&
                     raw_size <= MAX_TABLE_INPUT) {
+                    // myfix
+                    if (raw_size > 1 && TableCheckNoMatch(table, FcitxInputStateGetRawInputBuffer(input)))
+                    {
+                        return IRV_CLEAN;
+                    }
                     strCodeInput[raw_size] = (char)sym;
                     raw_size++;
                     strCodeInput[raw_size] = '\0';
