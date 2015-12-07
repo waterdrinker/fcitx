@@ -76,7 +76,7 @@ FcitxHotkey FCITX_LEFT[2] = {
 FCITX_EXPORT_API
 FcitxHotkey FCITX_ESCAPE[2] = {
     {NULL, FcitxKey_Escape, 0},
-    {NULL, 0, 0},
+    {NULL, FcitxKey_U, FcitxKeyState_Ctrl},
 };
 
 FCITX_EXPORT_API
